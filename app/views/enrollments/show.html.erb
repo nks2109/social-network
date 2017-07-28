@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @enrollment.user %>
+</p>
+
+<p>
+  <strong>College:</strong>
+  <%= @enrollment.college %>
+</p>
+
+<p>
+  <strong>Degree:</strong>
+  <%= @enrollment.degree %>
+</p>
+
+<p>
+  <strong>Year of grad:</strong>
+  <%= @enrollment.year_of_grad %>
+</p>
+
+<p>
+  <strong>Gpa:</strong>
+  <%= @enrollment.gpa %>
+</p>
+
+<%= link_to 'Edit', edit_enrollment_path(@enrollment) %> |
+<%= link_to 'Back', enrollments_path %>

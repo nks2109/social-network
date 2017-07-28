@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Enrollments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>College</th>
+      <th>Degree</th>
+      <th>Year of grad</th>
+      <th>Gpa</th>
+      <th>Website</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @enrollments.each do |enrollment| %>
+      <tr>
+        <td><%= enrollment.user.username %></td>
+        <td><%= enrollment.college.name %></td>
+        
+        <td><%= enrollment.degree %></td>
+        <td><%= enrollment.year_of_grad %></td>
+        <td><%= enrollment.gpa %></td>
+        <td><a href="<%= enrollment.college.website %>"> <%= enrollment.college.name %> </a></td>
+        <td><%= link_to enrollment.user.username, enrollment %></td>
+
+        <td><%= link_to 'Edit', edit_enrollment_path(enrollment) %></td>
+
+        <td><%= link_to 'Destroy', enrollment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Enrollment', new_enrollment_path %>
+    

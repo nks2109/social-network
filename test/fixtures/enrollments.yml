@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  college_id: 
+  degree: MyString
+  year_of_grad: 1
+  gpa: 1.5
+
+two:
+  user_id: 
+  college_id: 
+  degree: MyString
+  year_of_grad: 1
+  gpa: 1.5
